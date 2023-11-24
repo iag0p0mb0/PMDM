@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7blhkx6d3bnm"]
+
+[ext_resource type="Script" path="res://Global.gd" id="1_wsph1"]
+[ext_resource type="AudioStream" uid="uid://dlskccdkcgyem" path="res://breeze-of-blood-122253.mp3" id="2_50nyx"]
+
+[node name="Global" type="Node"]
+script = ExtResource("1_wsph1")
+
+[node name="PinapleSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_50nyx")
+volume_db = 0.626

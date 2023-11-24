@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://oefp0u3re146"]
+
+[ext_resource type="Script" path="res://coleccionable/piña.gd" id="1_636i1"]
+[ext_resource type="Texture2D" uid="uid://ba1gfob3up35y" path="res://assets/Assets_PixelAdventure/Items/Fruits/Pineapple.png" id="1_w4042"]
+
+[sub_resource type="Animation" id="Animation_ax4ro"]
+resource_name = "movement"
+length = 0.8
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+}
+
+[sub_resource type="Animation" id="Animation_1he44"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x4npg"]
+_data = {
+"RESET": SubResource("Animation_1he44"),
+"movement": SubResource("Animation_ax4ro")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1ivi5"]
+radius = 6.0
+height = 18.0
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_636i1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_w4042")
+hframes = 17
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_x4npg")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_1ivi5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
