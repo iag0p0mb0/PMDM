@@ -10,3 +10,6 @@ var pinaple := 0 :
 	get:
 		return pinaple
 var player
+
+func _ready():
+	$PrimarySound.play()

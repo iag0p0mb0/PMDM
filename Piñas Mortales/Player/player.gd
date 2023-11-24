@@ -25,6 +25,7 @@ func _physics_process(delta):
 
 	if is_on_floor() and Input.is_action_just_pressed("ui_accept"):#este if lo que hace es comprobar que el personaje está en el suelo y que se presiona la tecla correspondiente para poder saltar
 		velocity.y -= jump
+		$AudioStreamPlayer.play()
 	if !is_on_floor():
 		velocity.y += gravity	
 

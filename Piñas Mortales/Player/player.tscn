@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://cyvpt0gv6kjv2"]
+[gd_scene load_steps=13 format=3 uid="uid://cyvpt0gv6kjv2"]
 
 [ext_resource type="Texture2D" uid="uid://cdrkx8qn6n76l" path="res://assets/Assets_PixelAdventure/Main Characters/Ninja Frog.png" id="1_kyt48"]
 [ext_resource type="Script" path="res://Player/player.gd" id="1_o1mv0"]
+[ext_resource type="AudioStream" uid="uid://dv18ofhrnv17w" path="res://cartoon-jump-6462.mp3" id="3_khtpv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cd71p"]
 height = 22.0
@@ -135,3 +136,7 @@ label_settings = SubResource("LabelSettings_8idet")
 [node name="PinapleLabel2" type="Label" parent="PlayerGUI/HBoxContainer"]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_55btt")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_khtpv")
+volume_db = -21.301
