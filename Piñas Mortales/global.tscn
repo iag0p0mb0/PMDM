@@ -13,5 +13,5 @@ volume_db = -16.29
 
 [node name="PrimarySound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_isccu")
-volume_db = -40.097
+volume_db = -33.832
 autoplay = true
