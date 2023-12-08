@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bm76lkro2s3xk"]
+[gd_scene load_steps=9 format=3 uid="uid://bm76lkro2s3xk"]
 
 [ext_resource type="Texture2D" uid="uid://dqdbss7dj6ecv" path="res://assets/morning_adventures_tilemap/morning_adventures_tileset_16x16.png" id="1_w6p4b"]
 [ext_resource type="PackedScene" uid="uid://cyvpt0gv6kjv2" path="res://Player/player.tscn" id="2_dn0xs"]
 [ext_resource type="Texture2D" uid="uid://hpdbmu4tnkqd" path="res://assets/Forest Pass/PNG/bgcolor.png" id="3_b7lcy"]
 [ext_resource type="PackedScene" uid="uid://b5insb8itjxof" path="res://next_level_icon/coin.tscn" id="4_8bqjb"]
 [ext_resource type="PackedScene" uid="uid://oefp0u3re146" path="res://coleccionable/piña.tscn" id="5_uia6r"]
+[ext_resource type="PackedScene" uid="uid://cf4yispsjht47" path="res://enemy/enemy.tscn" id="6_6b46t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_meq6e"]
 texture = ExtResource("1_w6p4b")
@@ -276,3 +277,93 @@ position = Vector2(-312, 20)
 
 [node name="piña4" parent="." instance=ExtResource("5_uia6r")]
 position = Vector2(-231, 21)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-612, 205)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-587, 205)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-558, 205)
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-529, 205)
+
+[node name="CharacterBody2D5" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-497, 205)
+
+[node name="CharacterBody2D6" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-470, 205)
+
+[node name="CharacterBody2D7" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-442, 205)
+
+[node name="CharacterBody2D8" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-416, 205)
+
+[node name="CharacterBody2D9" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-391, 205)
+
+[node name="CharacterBody2D10" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-361, 205)
+
+[node name="CharacterBody2D11" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-328, 205)
+
+[node name="CharacterBody2D12" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-296, 205)
+
+[node name="CharacterBody2D13" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-260, 205)
+
+[node name="CharacterBody2D14" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-231, 205)
+
+[node name="CharacterBody2D15" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-203, 205)
+
+[node name="CharacterBody2D16" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-177, 205)
+
+[node name="CharacterBody2D17" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-122, 205)
+
+[node name="CharacterBody2D19" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-91, 205)
+
+[node name="CharacterBody2D20" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-65, 205)
+
+[node name="CharacterBody2D21" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-34, 205)
+
+[node name="CharacterBody2D22" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-8, 205)
+
+[node name="CharacterBody2D23" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(134, 205)
+
+[node name="CharacterBody2D24" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(174, 205)
+
+[node name="CharacterBody2D25" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(314, 205)
+
+[node name="CharacterBody2D26" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(403, 205)
+
+[node name="CharacterBody2D27" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(497, 205)
+
+[node name="CharacterBody2D28" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(586, 205)
+
+[node name="CharacterBody2D29" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(719, 205)
+
+[node name="CharacterBody2D30" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(1053, 74)
+
+[node name="CharacterBody2D18" parent="." instance=ExtResource("6_6b46t")]
+position = Vector2(-147, 205)

@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://7i3fwcivr0n7"]
+[gd_scene load_steps=9 format=3 uid="uid://7i3fwcivr0n7"]
 
 [ext_resource type="Texture2D" uid="uid://dqdbss7dj6ecv" path="res://assets/morning_adventures_tilemap/morning_adventures_tileset_16x16.png" id="1_8yhh1"]
 [ext_resource type="Texture2D" uid="uid://hpdbmu4tnkqd" path="res://assets/Forest Pass/PNG/bgcolor.png" id="2_dpqav"]
 [ext_resource type="PackedScene" uid="uid://cyvpt0gv6kjv2" path="res://Player/player.tscn" id="3_2fmtw"]
 [ext_resource type="PackedScene" uid="uid://b5insb8itjxof" path="res://next_level_icon/coin.tscn" id="4_torgp"]
 [ext_resource type="PackedScene" uid="uid://oefp0u3re146" path="res://coleccionable/piña.tscn" id="5_ss74o"]
+[ext_resource type="PackedScene" uid="uid://cf4yispsjht47" path="res://enemy/enemy.tscn" id="6_7n2a6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f4mfu"]
 texture = ExtResource("1_8yhh1")
@@ -257,7 +258,12 @@ layer_0/tile_data = PackedInt32Array(-917544, 65536, 1, -852008, 131072, 1, -786
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(263.5, 8.99998)
+position = Vector2(308, 4)
+scale = Vector2(35.2344, 11.25)
+texture = ExtResource("2_dpqav")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(292, 4)
 scale = Vector2(35.2344, 11.25)
 texture = ExtResource("2_dpqav")
 
@@ -278,3 +284,165 @@ position = Vector2(583, 66)
 
 [node name="piña4" parent="." instance=ExtResource("5_ss74o")]
 position = Vector2(1016, 211)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-488, 225)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-471, 225)
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-454, 225)
+
+[node name="CharacterBody2D5" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-437, 225)
+
+[node name="CharacterBody2D6" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-420, 225)
+
+[node name="CharacterBody2D13" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-403, 225)
+
+[node name="CharacterBody2D14" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-386, 225)
+
+[node name="CharacterBody2D15" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-369, 225)
+
+[node name="CharacterBody2D16" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-352, 225)
+
+[node name="CharacterBody2D17" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-335, 225)
+
+[node name="CharacterBody2D18" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-318, 225)
+
+[node name="CharacterBody2D19" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-301, 225)
+
+[node name="CharacterBody2D20" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-284, 225)
+
+[node name="CharacterBody2D21" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-267, 225)
+
+[node name="CharacterBody2D22" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-250, 225)
+
+[node name="CharacterBody2D23" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-233, 225)
+
+[node name="CharacterBody2D24" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-216, 225)
+
+[node name="CharacterBody2D25" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-199, 225)
+
+[node name="CharacterBody2D26" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-182, 225)
+
+[node name="CharacterBody2D27" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-165, 225)
+
+[node name="CharacterBody2D28" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-148, 225)
+
+[node name="CharacterBody2D29" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-131, 225)
+
+[node name="CharacterBody2D30" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-114, 225)
+
+[node name="CharacterBody2D31" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-97, 225)
+
+[node name="CharacterBody2D32" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-80, 225)
+
+[node name="CharacterBody2D33" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-43, 225)
+
+[node name="CharacterBody2D35" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-26, 225)
+
+[node name="CharacterBody2D36" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-9, 225)
+
+[node name="CharacterBody2D37" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(8, 225)
+
+[node name="CharacterBody2D38" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(25, 225)
+
+[node name="CharacterBody2D39" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(59, 225)
+
+[node name="CharacterBody2D41" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(76, 225)
+
+[node name="CharacterBody2D46" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(76, 225)
+
+[node name="CharacterBody2D42" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(93, 225)
+
+[node name="CharacterBody2D43" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(110, 225)
+
+[node name="CharacterBody2D44" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(127, 225)
+
+[node name="CharacterBody2D45" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(144, 225)
+
+[node name="CharacterBody2D40" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(42, 225)
+
+[node name="CharacterBody2D34" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-60, 225)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-505, 225)
+
+[node name="CharacterBody2D7" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-522, 225)
+
+[node name="CharacterBody2D8" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-539, 225)
+
+[node name="CharacterBody2D9" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-556, 225)
+
+[node name="CharacterBody2D10" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-573, 225)
+
+[node name="CharacterBody2D11" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-590, 225)
+
+[node name="CharacterBody2D12" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-607, 225)
+
+[node name="CharacterBody2D47" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-230, 82)
+
+[node name="CharacterBody2D48" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(-173, 82)
+
+[node name="CharacterBody2D49" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(491, 81)
+
+[node name="CharacterBody2D50" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(519, 81)
+
+[node name="CharacterBody2D51" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(539, 81)
+
+[node name="CharacterBody2D52" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(747, 124)
+
+[node name="CharacterBody2D53" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(877, 189)
+
+[node name="CharacterBody2D54" parent="." instance=ExtResource("6_7n2a6")]
+position = Vector2(966, 225)
