@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://7i3fwcivr0n7"]
+[gd_scene load_steps=8 format=3 uid="uid://7i3fwcivr0n7"]
 
 [ext_resource type="Texture2D" uid="uid://dqdbss7dj6ecv" path="res://assets/morning_adventures_tilemap/morning_adventures_tileset_16x16.png" id="1_8yhh1"]
 [ext_resource type="Texture2D" uid="uid://hpdbmu4tnkqd" path="res://assets/Forest Pass/PNG/bgcolor.png" id="2_dpqav"]
 [ext_resource type="PackedScene" uid="uid://cyvpt0gv6kjv2" path="res://Player/player.tscn" id="3_2fmtw"]
 [ext_resource type="PackedScene" uid="uid://b5insb8itjxof" path="res://next_level_icon/coin.tscn" id="4_torgp"]
+[ext_resource type="PackedScene" uid="uid://oefp0u3re146" path="res://coleccionable/piña.tscn" id="5_ss74o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f4mfu"]
 texture = ExtResource("1_8yhh1")
@@ -261,7 +262,19 @@ scale = Vector2(35.2344, 11.25)
 texture = ExtResource("2_dpqav")
 
 [node name="Player" parent="." instance=ExtResource("3_2fmtw")]
-position = Vector2(-609, 0)
+position = Vector2(-613, 0)
 
 [node name="coin" parent="." instance=ExtResource("4_torgp")]
 position = Vector2(1116, 219)
+
+[node name="piña" parent="." instance=ExtResource("5_ss74o")]
+position = Vector2(233, 81)
+
+[node name="piña2" parent="." instance=ExtResource("5_ss74o")]
+position = Vector2(438, 65)
+
+[node name="piña3" parent="." instance=ExtResource("5_ss74o")]
+position = Vector2(583, 66)
+
+[node name="piña4" parent="." instance=ExtResource("5_ss74o")]
+position = Vector2(1016, 211)

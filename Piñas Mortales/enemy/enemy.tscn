@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cf4yispsjht47"]
 
-[ext_resource type="Script" path="res://Player/player.gd" id="1_eiekk"]
-[ext_resource type="Texture2D" uid="uid://c8hjluoeo8ooe" path="res://assets/dinoCharactersVersion/sheets/DinoSprites - mort.png" id="2_a4bpi"]
+[ext_resource type="Script" path="res://Player/player.gd" id="1_4t8lu"]
+[ext_resource type="Texture2D" uid="uid://c8hjluoeo8ooe" path="res://assets/dinoCharactersVersion/sheets/DinoSprites - mort.png" id="2_ihdeh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cd71p"]
 height = 22.0
@@ -84,10 +84,10 @@ _data = {
 }
 
 [node name="enemy" type="CharacterBody2D"]
-script = ExtResource("1_eiekk")
+script = ExtResource("1_4t8lu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_a4bpi")
+texture = ExtResource("2_ihdeh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5)

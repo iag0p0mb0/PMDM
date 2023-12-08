@@ -1,58 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://dsilhmo4lw5d"]
+[gd_scene load_steps=4 format=3 uid="uid://byvpr545rer0v"]
 
-[ext_resource type="Script" path="res://Escenas/Menu.gd" id="1_5epfl"]
-[ext_resource type="FontFile" path="res://Valoon.ttf" id="2_fdhai"]
+[ext_resource type="Script" path="res://menu.gd" id="1_p3bbd"]
+[ext_resource type="FontFile" uid="uid://blthdxa18dlua" path="res://assets/Valoon.ttf" id="2_lhkov"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_yjic0"]
-font = ExtResource("2_fdhai")
-font_size = 24
+[sub_resource type="LabelSettings" id="LabelSettings_uy4ab"]
+font = ExtResource("2_lhkov")
 
-[node name="Main Menu" type="Control"]
+[node name="menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_5epfl")
+script = ExtResource("1_p3bbd")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -96.5
-offset_top = -81.5
-offset_right = 96.5
-offset_bottom = 81.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Title" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-text = "THE PMDM GAME"
-label_settings = SubResource("LabelSettings_yjic0")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Play" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "PLAY"
-
-[node name="Settings" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "SETTINGS"
-
-[node name="Exit" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "EXIT"
-icon_alignment = 1
-
-[node name="Settings Menu" type="Control" parent="."]
+[node name="main menu" type="VBoxContainer" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -60,14 +23,43 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -60.0
+offset_top = -39.5
+offset_right = 60.0
+offset_bottom = 39.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Settings Menu"]
+[node name="title" type="Label" parent="main menu"]
+layout_mode = 2
+text = "Piñas Mortales"
+label_settings = SubResource("LabelSettings_uy4ab")
+
+[node name="Play" type="Button" parent="main menu"]
+layout_mode = 2
+text = "PLAY
+"
+
+[node name="Settings" type="Button" parent="main menu"]
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="Exit" type="Button" parent="main menu"]
+layout_mode = 2
+text = "EXIT
+"
+
+[node name="Settings menu" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings menu"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -80,31 +72,31 @@ offset_right = 30.0
 offset_bottom = 33.0
 grow_horizontal = 2
 grow_vertical = 2
+alignment = 1
 
-[node name="Video" type="Button" parent="Settings Menu/VBoxContainer"]
+[node name="Video" type="Button" parent="Settings menu/VBoxContainer"]
 layout_mode = 2
-text = "VIDEO
-"
+text = "VIDEO"
 
-[node name="Audio" type="Button" parent="Settings Menu/VBoxContainer"]
+[node name="Audio" type="Button" parent="Settings menu/VBoxContainer"]
 layout_mode = 2
 text = "AUDIO"
 
-[node name="BackToMain" type="Button" parent="Settings Menu"]
+[node name="BackToMain" type="Button" parent="Settings menu"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -4.0
-offset_top = -8.0
-offset_right = 4.0
+offset_left = -52.0
+offset_top = -31.0
+offset_right = 52.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "BACK"
+text = "MAIN MENU"
 
-[node name="Video Menu" type="Control" parent="."]
+[node name="Video menu" type="Control" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -112,87 +104,70 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.5, 0.5)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Video Menu"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Video menu"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -55.5
+offset_left = -64.0
 offset_top = -43.0
-offset_right = 55.5
+offset_right = 64.0
 offset_bottom = 43.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Labels" type="VBoxContainer" parent="Video Menu/HBoxContainer"]
-layout_mode = 2
-
-[node name="FullScreen" type="Label" parent="Video Menu/HBoxContainer/Labels"]
-layout_mode = 2
-size_flags_horizontal = 0
-text = "FullScreen"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Borderless" type="Label" parent="Video Menu/HBoxContainer/Labels"]
-layout_mode = 2
-size_flags_horizontal = 0
-text = "Borderless"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="VSync" type="Label" parent="Video Menu/HBoxContainer/Labels"]
-layout_mode = 2
-size_flags_horizontal = 0
-text = "VSync"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Checks" type="VBoxContainer" parent="Video Menu/HBoxContainer"]
-layout_mode = 2
-
-[node name="FullScreen" type="CheckBox" parent="Video Menu/HBoxContainer/Checks"]
+[node name="labels" type="VBoxContainer" parent="Video menu/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 6
-flat = true
-alignment = 1
-icon_alignment = 1
+size_flags_vertical = 4
 
-[node name="Borderless" type="CheckBox" parent="Video Menu/HBoxContainer/Checks"]
+[node name="FullScreen" type="Label" parent="Video menu/HBoxContainer/labels"]
+layout_mode = 2
+text = "FULLSCREEN"
+
+[node name="Borderless" type="Label" parent="Video menu/HBoxContainer/labels"]
+layout_mode = 2
+text = "BORDERLESS"
+
+[node name="VSync" type="Label" parent="Video menu/HBoxContainer/labels"]
+layout_mode = 2
+text = "VSYNC"
+
+[node name="checks" type="VBoxContainer" parent="Video menu/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 6
-flat = true
-alignment = 1
-icon_alignment = 1
+size_flags_vertical = 4
 
-[node name="VSync" type="CheckBox" parent="Video Menu/HBoxContainer/Checks"]
+[node name="FullScreen" type="CheckBox" parent="Video menu/HBoxContainer/checks"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 6
-flat = true
-alignment = 1
-icon_alignment = 1
 
-[node name="BackToMain" type="Button" parent="Video Menu"]
+[node name="Borderless" type="CheckBox" parent="Video menu/HBoxContainer/checks"]
+layout_mode = 2
+
+[node name="VSync" type="CheckBox" parent="Video menu/HBoxContainer/checks"]
+layout_mode = 2
+
+[node name="BackToMain" type="Button" parent="Video menu"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -4.0
-offset_top = -8.0
-offset_right = 4.0
+offset_left = -52.0
+offset_top = -31.0
+offset_right = 52.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "BACK"
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "MAIN MENU"
 
-[node name="Audio Menu" type="Control" parent="."]
+[node name="Audio menu" type="Control" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -200,68 +175,83 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.5, 0.5)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Audio Menu"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Audio menu"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -44.5
+offset_left = -108.0
 offset_top = -43.0
-offset_right = 44.5
+offset_right = 108.0
 offset_bottom = 43.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
 
-[node name="Labels" type="VBoxContainer" parent="Audio Menu/HBoxContainer"]
+[node name="Label" type="VBoxContainer" parent="Audio menu/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="Master" type="Label" parent="Audio Menu/HBoxContainer/Labels"]
+[node name="Master" type="Label" parent="Audio menu/HBoxContainer/Label"]
 layout_mode = 2
-text = "MASTER"
-horizontal_alignment = 1
-vertical_alignment = 1
+size_flags_vertical = 6
+text = "MASTER
+"
 
-[node name="Music" type="Label" parent="Audio Menu/HBoxContainer/Labels"]
+[node name="Music" type="Label" parent="Audio menu/HBoxContainer/Label"]
 layout_mode = 2
+size_flags_vertical = 6
 text = "MUSIC"
-horizontal_alignment = 1
-vertical_alignment = 1
 
-[node name="SoundFX" type="Label" parent="Audio Menu/HBoxContainer/Labels"]
+[node name="SoundFX" type="Label" parent="Audio menu/HBoxContainer/Label"]
 layout_mode = 2
+size_flags_vertical = 6
 text = "SOUNDFX"
-horizontal_alignment = 1
-vertical_alignment = 1
 
-[node name="Slider" type="VBoxContainer" parent="Audio Menu/HBoxContainer"]
+[node name="Slider" type="VBoxContainer" parent="Audio menu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="Master" type="HSlider" parent="Audio menu/HBoxContainer/Slider"]
 layout_mode = 2
 
-[node name="Master" type="HSlider" parent="Audio Menu/HBoxContainer/Slider"]
+[node name="Music" type="HSlider" parent="Audio menu/HBoxContainer/Slider"]
 layout_mode = 2
 
-[node name="Music" type="HSlider" parent="Audio Menu/HBoxContainer/Slider"]
+[node name="SoundFX" type="HSlider" parent="Audio menu/HBoxContainer/Slider"]
 layout_mode = 2
 
-[node name="SoundFX" type="HSlider" parent="Audio Menu/HBoxContainer/Slider"]
-layout_mode = 2
-
-[node name="BackToMain" type="Button" parent="Audio Menu"]
+[node name="BackToMain" type="Button" parent="Audio menu"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -4.0
-offset_top = -8.0
-offset_right = 4.0
+offset_left = -52.0
+offset_top = -31.0
+offset_right = 52.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "BACK"
+text = "MAIN MENU"
 
-[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="main menu/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="main menu/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="main menu/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Settings menu/VBoxContainer/Video" to="." method="_on_video_pressed"]
+[connection signal="pressed" from="Settings menu/VBoxContainer/Audio" to="." method="_on_audio_pressed"]
+[connection signal="pressed" from="Settings menu/BackToMain" to="." method="_on_back_to_main_pressed"]
+[connection signal="toggled" from="Video menu/HBoxContainer/checks/FullScreen" to="." method="_on_full_screen_toggled"]
+[connection signal="toggled" from="Video menu/HBoxContainer/checks/Borderless" to="." method="_on_borderless_toggled"]
+[connection signal="toggled" from="Video menu/HBoxContainer/checks/VSync" to="." method="_on_v_sync_toggled"]
+[connection signal="pressed" from="Video menu/BackToMain" to="." method="_on_back_to_main_pressed"]
+[connection signal="changed" from="Audio menu/HBoxContainer/Slider/Master" to="." method="_on_master_changed"]
+[connection signal="changed" from="Audio menu/HBoxContainer/Slider/Music" to="." method="_on_music_changed"]
+[connection signal="changed" from="Audio menu/HBoxContainer/Slider/SoundFX" to="." method="_on_sound_fx_changed"]
+[connection signal="pressed" from="Audio menu/BackToMain" to="." method="_on_back_to_main_pressed"]

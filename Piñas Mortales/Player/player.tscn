@@ -102,7 +102,7 @@ font_size = 10
 [sub_resource type="LabelSettings" id="LabelSettings_55btt"]
 font_size = 10
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_o1mv0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
